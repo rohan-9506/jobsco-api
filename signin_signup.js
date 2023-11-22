@@ -9,7 +9,6 @@ const databaseUri = 'mongodb+srv://rohanrai40679:Shivani8826@cluster0.qhakv4a.mo
 
 app.use(bodyParser.json());
 
-
 mongoose.connect(databaseUri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -25,6 +24,7 @@ const userSchema = new mongoose.Schema({
   username: { type: String, required: true, unique: true },
   password: { type: String, required: true },
 });
+
 
 const User = mongoose.model('User', userSchema);
 
